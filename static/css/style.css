@@ -1,0 +1,103 @@
+body{
+    color: white;
+    background-color: black;
+    font-family: 'Itim', cursive;
+}
+
+#main{
+    background-image: url('../images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.url{
+    margin-top: 19vh;
+}
+
+.nav{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.navbar-brand{
+    color: white !important;
+}
+.nav-link{
+    color: white !important;
+}
+
+.gold{
+    background-color: goldenrod;
+}
+
+.btn{
+    border-color: black;
+    color: grey;
+}
+
+.form-control{
+    border-color: black;
+}
+
+.form-control:hover{
+    border-color: goldenrod;
+}
+.form-control:active{
+    color: goldenrod !important;
+}
+.btn:hover{
+    color: goldenrod;
+    background-color: transparent;
+    border-color: goldenrod;
+}
+
+.h2tag{
+    text-shadow: 0px 1px 10px goldenrod;
+}
+
+.card-body{
+    box-shadow: 0px 1px 4px goldenrod;
+}
+
+#footer a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+
+#footer a:hover{
+   color: goldenrod;
+}
+
+.para{
+    margin-top: -12px;
+}
+
+#footer span{
+    color: goldenrod;
+}
+
+#howto{
+    padding-top: 8%;
+}
+
+#pinterestoZ{
+    padding-top: 8%;
+}
+
+#FAQ{
+    padding-top: 8%;
+}
+
+#footer{
+    padding-top: 8%;
+}
+
+#download{
+    padding-top: 8%;
+}
+
+.fa-chevron-down{
+    cursor: pointer;
+}
+
