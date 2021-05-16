@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="pinterestoZ is a pinterest image downloader app to download pinterest images for free, Download pinterest images online in HD quality using pinterest image downloader online app pinterestoZ.">
+    <meta name="keywords" content="pinterest image downloader, pinterest image downloader online, download pinterest images online, download pinterest images without login, download pinterest images high quality, download images from pinterest online">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Pangolin&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/think-peaks-brands.svg' %}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="shortcut icon" type="image/png" href="{% static 'images/veehalli.png' %}">
-    <title>Pinterest Downloader</title>
+    <title>pinterestoZ - Pinterest Image Downloader, Download Pinterest Images Online</title>
 </head>
 <body>
 
@@ -32,7 +34,7 @@
                   <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link ml-3" href="#pinterestoZ">About Us</a>
+                  <a class="nav-link ml-3" href="{% url 'about' %}">About Us</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link ml-3" href="#howto">How To</a>
@@ -45,28 +47,23 @@
           </nav>
      </div>
  </section>
-
+{% block content %}
  <section>
      <div class="container-fluid url h2tag">
         <div class="row mb-5">
         
           <div class="col-lg-12 col-md-12 col-12 text-center">
             <h1>Pinterest Image Downloader</h1>
-            <p>Download Pinterest Images - One click picture save</p>
+            <p>Pinterest image downloader app : pinterestoZ is an online tool to download pinterest images. <br>Download pinterest images online in high quality without login.</p>
           </div>
         
         
           <div class="col-lg-12 col-md-12 col-12 text-center mb-2">
-            <form action="" method="POST">
+            <form action="" method="POST" enctype="multipart/form-data">
               {% csrf_token %}
-              <input name="url" placeholder="Enter Pinterest Image URL" class="form-control col-lg-6 col-md-6 col-12 mx-auto bg-transparent">
+              <input name="pinterest image url" placeholder="Paste Pinterest Image URL" class="form-control col-lg-6 col-md-6 col-12 mx-auto bg-transparent">
               <button type="submit" class="search btn btn-outline-info mt-3">Search</button>
-              <h2 class="process text-center mt-5" style="display: none;">Processing, Please wait.....</h2>
-              <script>
-                $('.search').click(function(){
-                   $('.process').show(1000);
-                })
-              </script>
+              <h2 class="process text-center mt-3" style="display: none;">Processing, Please wait.....</h2>
             </form>
           </div>
         
@@ -75,13 +72,13 @@
 {% for message in messages %}
 <h3 class="message text-center">{{message}}</h3>
 <script>
-  $('.message').slideUp(8000);
+    $('.message').slideUp(8000);
 </script>
 {% endfor %}
 {% endif %}
 
 {% if image %}
-        <h3 class="text-center">Please scroll down to download your image</h3>
+        <h3 class="image text-center">Please scroll down to download your pinterest image</h3>
         <h3 class="text-center"><i class="fas fa-arrow-down"></i></h3>
 {% endif %}
      </div>
@@ -104,33 +101,51 @@
     <hr class="w-50 gold">
     <p>Image preview</p>
     <img src="{{image}}" class="col-lg-5 col-md-5 col-12 mx-auto"><br>
-    <a href="{{image}}" download="True" target="_blank" class="btn mt-4">Download  <i class="fas fa-download ml-2 "></i></a>
+    <a href="{{image}}" download="True" target="_blank" class="btn mt-4">Download  Image <i class="fas fa-download ml-2 "></i></a>
 
   </div>
  
 </section>
 {% endif %}
 
+<section>
+  <div class="container mt-5">
+    <h5>PinterestoZ is an online pinterest image downloader web tool, using pinterestoZ web tool you can download images from pinterest and it allows the user to download pinterest images in hd. It is an easy and free tool to download pinterest images without login.</h5>
+    <h2 class="text-center h2tag mt-5">Why PinterestoZ ?</h2>
+    <hr class="w-50 gold">
+    <p class="mt-5">PinterestoZ is not only allows users to download pinterest images in one click, also provides user a safe environment to download pinterest images without login. PinterestoZ never tracks user's downloaded pinterest images. It is completely junk and malware free tool to download full size images from pinterest.</p>
+    <h4 class="mt-4"><span>Why we developed PinterestoZ ?</span></h4>
+    <p class="mt-4">Pinterest is an online image sharing and social media service platform established by an Ameriacn company in December 2009. Pinterest doesn't allow others to download pinterest images and people are facing problems without the downloading option. To over come these kind of problems we have developed pinterestoZ . If you are one among those, who are searching for listed below you should try the pinteretoZ once to solve your downloading problem is an easy and free way.</p>
+    <p >1. how to download pinterest images</p>
+    <p class="para">2. how to download pinterest images in hd</p>
+    <p class="para">3. how to download pinterest images to gallery</p>
+    <p class="para">4. how to donload pinterest images without login</p>
+    <p class="para">5. pinterest image downloader</p>
+    <p class="para">6. pinterest image downloader online</p>
+    <p class="para">7. pinterest image downloader app</p>
+    <p class="para">8. pinterest image downloader full size</p>
+  </div>
+</section>
 
 <section id="howto">
 <div class="container mt-5">
-  <h2 class="text-center h2tag">How to use PinterestoZ ?</h2>
+  <h2 class="text-center h2tag">How to download pinterest images ?</h2>
   <hr class="w-50 gold">
 
   <div class="row text-center">
     <div class="col-lg-4 col-md-4 col-12 mt-5">
-       <img src="{% static 'images/final1.jpg' %}" class="col-lg-12 col-md-12 col-12">
-       <h5 class="mt-3">#1. Copy Image URL</h5>
+       <img src="{% static 'images/howto1.jpg' %}" class="col-lg-12 col-md-12 col-12" alt="how to download pinterest images step 1 image">
+       <h5 class="mt-3">Step 1. Copy Pinterest Image URL</h5>
        <p>Copy the Pinterest image URL which you want to save.</p>
     </div>
     <div class="col-lg-4 col-md-4 col-12 mt-5">
-      <img src="{% static 'images/final2.jpg' %}" class="col-lg-12 cl-md-12 col-12" >
-      <h5 class="mt-3">#2. Paste The Links</h5>
+      <img src="{% static 'images/howto2.jpg' %}" class="col-lg-12 cl-md-12 col-12" alt="how to download pinterest images step 2">
+      <h5 class="mt-3">Step 2. Paste The Link</h5>
       <p>Paste the URL of the Pinterest image that you copied to download, then click the search button.</p>
    </div>
    <div class="col-lg-4 col-md-4 col-12 mt-5">
-    <img src="{% static 'images/final3.png' %}" class="col-lg-12 col-md-12 col-12">
-    <h5 class="mt-3">#3. Download Image</h5>
+    <img src="{% static 'images/howto3.jpg' %}" class="col-lg-12 col-md-12 col-12" alt="how to download pinterest images without login step 3">
+    <h5 class="mt-3">Step 3. Download Image</h5>
     <p>Now just click the download button and your download will be started.</p>
  </div>
 
@@ -139,83 +154,55 @@
 </div>
 </section>
 
-<section id="pinterestoZ">
-  <div class="container mt-5">
-    <h2 class="text-center h2tag">PinterestoZ</h2>
-    <hr class="gold w-50 ">
-    <p class="mt-4">PinterestoZ is a free Pinterest image downloader online tool. You can download Pinterest Images directly to your computer, tablet or mobile by using PinterestoZ. You can download Pinterest Images in HD JPG format with PinterestoZ.herokuapp.com. why we developed PinterestoZ ? because we noticed that Pinterest does not allow to download images. Due to which people were facing a lot of trouble in downloading Pinterest images. PinterestoZ is a solution for those who want to download Pinterest images for the free and easy way.</p>
-    
-  </div>
-</section>
 
 <section id="FAQ">
   <div class="container mt-5 mb-5">
     <h2 class="text-center h2tag">Frequently Asked Questions</h2>
     <hr class="gold w-50 ">
 
-    <div class="card card-body mt-5 col-lg-8 col-md-8 col-12 mx-auto bg-transparent pb-2">
-      <h5 id="hideone">Do I need to register to download images?  <i class="fas fa-chevron-down float-right mt-1"></i></h5>
-      <p id="hideonep" style="display: none;">No, you do not need an account to download Pinterest images.</p>
-    </div>
-    <script>
-      $('#hideone').click(function(){
-        $('#hideonep').toggle(1000);
-      })
-    </script>
-
     
-    <div class="card card-body mt-4 col-lg-8 col-md-8 col-12 mx-auto bg-transparent pb-2">
-      <h5 id="hidetwo">Is PinterestoZ safe for my device?  <i class="fas fa-chevron-down float-right mt-1"></i></h5>
-      <p id="hidetwop" style="display: none;">Yes, Our first priority is our user's safety. PinterestoZ is completely safe to download. No virus, No malware</p>
-    </div>
-    <script>
-      $('#hidetwo').click(function(){
-        $('#hidetwop').toggle(1000);
-      })
-    </script>
+      <h4 class="mt-5">1. Can I download pinterest images without login ?  </h4>
+      <p>Yes, you do not need to register on pinterestoZ to download Pinterest images.</p>
+  
+      <h4 class="mt-4">2. Can I download pinterest images in hd ?</h4>
+      <p>Yes, you can download pinterest images in hd quality using pinterestoZ.</p>
 
-    <div class="card card-body mt-4 col-lg-8 col-md-8 col-12 mx-auto bg-transparent pb-2">
-      <h5 id="hidethree">Does PinterestoZ track a user's downloaded images?  <i class="fas fa-chevron-down float-right mt-1"></i></h5>
-      <p id="hidethreep" style="display: none;">No, PinterestoZ does not store downloaded images. All images are hosted on Pinterest servers and we do not store the download history of viewers. Everyone can use this tool anonymously. This Tool is 100% safe for viewers.</p>
-    </div>
-    <script>
-      $('#hidethree').click(function(){
-        $('#hidethreep').toggle(1000);
-      })
-    </script>
+      <h4 class="mt-4">3. Can I download pinterest images to gallery ?</h4>
+      <p>Yes, you can save downloaded pinterest images to gallery.</p>
+ 
+      <h4 class="mt-4">4. Does PinterestoZ track a user's downloaded images ? </h4>
+      <p>No, PinterestoZ does not store downloaded images. All images are hosted on Pinterest servers and we do not store the download history of viewers. Everyone can use pinterestoZ tool anonymously.  PinterestoZ is 100% safe for viewers.</p>
+      
+      <h4 class="mt-4">5. Is downloading pinterest images from pinterestoZ safe ? </h4>
+      <p>Yes, no virus and no malware we concern about viewer's privacy and safety. PinterestoZ is free and safe web tool to download images from pinterest.</p>
 
-    <div class="card card-body mt-4 col-lg-8 col-md-8 col-12 mx-auto bg-transparent pb-2">
-      <h5 id="hidefour">Is PinterestoZ free?  <i class="fas fa-chevron-down float-right mt-1"></i></h5>
-      <p id="hidefourp" style="display: none;">Yes! And it always will be. We are happy to help the people with our tool.</p>
-    </div>
-    <script>
-      $('#hidefour').click(function(){
-        $('#hidefourp').toggle(1000);
-      })
-    </script>
+      <h4 class="mt-4">6. Is PinterestoZ free? </h4>
+      <p>Yes! And it always will be. We are happy to help the people with our web tool.</p>
+    
+  
 
   </div>
 </section>
 
-
+{% endblock %}
 
 <section id="footer">
   <section class="container">
     <hr class="w-75 gold ml-0">
     </section>
-  <div class="container mt-5 mb-3">
+  <div class="container mt-5 pb-3">
     <div class="row">
 
       <div class="col-lg-8 col-md-8 col-12">
         <h4 class="h2tag">Disclaimer</h4>
-        <p>PinterestoZ does not host any pirated or copyright content on its server, and all videos or images that you
-          download from our tool are downloaded from their respective CDN servers. And this Tool is Not associated with
+        <p>PinterestoZ does not host any pirated or copyright content on its server, and all images that you
+          download from our tool are downloaded from their respective CDN servers. And pinterestoZ is Not associated with
           Pinterest in any ways.</p>
       </div>
       <div class="col-lg-4 col-md-4 col-12">
         <h4 class="h2tag">Page Info</h4>
-        <a href="#pinterestoZ">About Us</a><br>
-        <a href="#">Privacy Policy</a>
+        <a href="{% url 'about' %}">About Us</a><br>
+        <a href="{% url 'privacy' %}">Privacy Policy</a>
       </div>
 
     </div>
@@ -226,7 +213,15 @@
   
   </div>
 </section>
- 
+
+<script>
+  $(document).ready(function(){
+    $('.search').click(function (){
+       $('.process').show(1000);
+    })
+  });
+</script>
+
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

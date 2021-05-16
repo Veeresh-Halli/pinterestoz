@@ -11,7 +11,7 @@ body{
 }
 
 .url{
-    margin-top: 19vh;
+    margin-top: 17vh;
 }
 
 .nav{
@@ -78,26 +78,37 @@ body{
 }
 
 #howto{
-    padding-top: 8%;
+    padding-top: 3%;
 }
 
 #pinterestoZ{
-    padding-top: 8%;
+    padding-top: 3%;
 }
 
 #FAQ{
-    padding-top: 8%;
+    padding-top: 3%;
 }
 
 #footer{
-    padding-top: 8%;
+    padding-top: 3%;
 }
 
 #download{
-    padding-top: 8%;
+    padding-top: 3%;
 }
 
 .fa-chevron-down{
     cursor: pointer;
 }
 
+.message{
+ margin-top: -3vh;
+}
+
+.para{
+    margin-top: -10px;
+}
+
+.email{
+    color: goldenrod;
+}

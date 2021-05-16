@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'g$5oqykew+*_%cs98*sn9vj=1nqww^-n!^n9aozmza!$5--ro)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['pinterestoz.herokuapp.com','127.0.0.1']
+ALLOWED_HOSTS = ['pinterestoz.herokuapp.com','127.0.0.1',]
 
 
 # Application definition

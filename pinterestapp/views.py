@@ -8,12 +8,11 @@ from django.contrib import messages
 def index(request):
     image = None
     if request.method == "POST":
-        url = request.POST.get('url')
+        url = request.POST.get('pinterest image url')
         if url != "":
             first = url[:29]
             second = url[:25]
             third = url[:30]
-            print(third)
             first_condition = "https://in.pinterest.com/pin/"
             second_condition = "in.pinterest.com/pin/"
             third_condition = "https://www.pinterest.com/pin/"
@@ -35,3 +34,9 @@ def index(request):
             messages.error(request, "Please enter the pinterest image link....")
     context = {'image':image}
     return render(request, 'index.html', context)
+
+def privacy(request):
+    return render(request, 'privacy.html')
+
+def about(request):
+    return render(request, 'about.html')
